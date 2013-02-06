@@ -25,6 +25,5 @@
             "Xi\\Algorithm": "library/"
         }
     },
-    "target-dir": "Xi/Algorithm",
     "minimum-stability": "dev"
 }
