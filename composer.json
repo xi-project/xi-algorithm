@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Xi\\Algorithm": ["library/", "tests/"]
+            "Xi\\Algorithm": ["library/"]
         }
     },
     "minimum-stability": "dev"
