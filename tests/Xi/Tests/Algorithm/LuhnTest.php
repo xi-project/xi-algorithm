@@ -1,11 +1,10 @@
 <?php
 
-namespace Xi\Tests\Algorithm;
+namespace Xi\Algorithm\Tests;
 
 use Xi\Algorithm\Luhn;
 
 /**
- * @group tool
  * @group luhn
  */
 class LuhnTest extends \PHPUnit_Framework_TestCase
@@ -19,7 +18,8 @@ class LuhnTest extends \PHPUnit_Framework_TestCase
      */
     public function generatesLuhnChecksum($number, $expected)
     {
-        $luhnedNumber = (new Luhn($number))->generate();
+        $luhn = new Luhn($number);
+        $luhnedNumber = $luhn->generate();
 
         $this->assertInternalType('integer', $luhnedNumber);
         $this->assertEquals($expected, $luhnedNumber);

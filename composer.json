@@ -9,6 +9,16 @@
         {
             "name": "xi-project",
             "email": "xi.devs@gmail.com"
+        },
+        {
+            "name": "Mikko Hirvonen",
+            "email": "mikko.petteri.hirvonen@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Joonas Pajuen",
+            "email": "joonas.pajunen@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
@@ -19,6 +29,6 @@
             "Xi\\Algorithm": "library/"
         }
     },
-    "target-dir": "Xi/Algorithmi",
+    "target-dir": "Xi/Algorithm",
     "minimum-stability": "dev"
 }
