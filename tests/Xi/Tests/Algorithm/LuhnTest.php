@@ -30,10 +30,10 @@ class LuhnTest extends \PHPUnit_Framework_TestCase
      */
     public function luhnProvider()
     {
-        return [
-            [7992739871, 79927398713],
-            [123, 1230],
-            [456, 4564],
-        ];
+        return array(
+            array(7992739871, 79927398713),
+            array(123, 1230),
+            array(456, 4564),
+        );
     }
 }
