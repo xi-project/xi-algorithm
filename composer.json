@@ -7,10 +7,6 @@
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "xi-project",
-            "email": "xi.devs@gmail.com"
-        },
-        {
             "name": "Mikko Hirvonen",
             "email": "mikko.petteri.hirvonen@gmail.com",
             "role": "Developer"
