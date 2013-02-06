@@ -22,9 +22,8 @@
     },
     "autoload": {
         "psr-0": {
-            "Xi\\Algorithm": "library/"
+            "Xi\\Algorithm": ["library/", "tests/"]
         }
     },
-    "target-dir": "Xi/Algorithm",
     "minimum-stability": "dev"
 }
