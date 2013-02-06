@@ -1,0 +1,14 @@
+language: php
+php:
+  - 5.3
+  - 5.4
+  - 5.5
+
+script: cd tests && phpunit
+
+before_script:
+  - wget http://getcomposer.org/composer.phar
+  - php composer.phar install
+
+notifications:
+  irc: "irc.freenode.net#xi-project"

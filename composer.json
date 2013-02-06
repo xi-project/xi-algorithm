@@ -1,0 +1,30 @@
+{
+    "name": "xi/algorithm",
+    "type": "library",
+    "description": "A Repository for algorithms",
+    "keywords": ["algorithm"],
+    "homepage": "http://github.com/xi-project/xi-algorithm",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Mikko Hirvonen",
+            "email": "mikko.petteri.hirvonen@gmail.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Joonas Pajunen",
+            "email": "joonas.pajunen@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "autoload": {
+        "psr-0": {
+            "Xi\\Algorithm": "library/"
+        }
+    },
+    "target-dir": "Xi/Algorithm",
+    "minimum-stability": "dev"
+}
