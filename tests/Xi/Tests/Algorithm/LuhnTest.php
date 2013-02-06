@@ -31,7 +31,7 @@ class LuhnTest extends \PHPUnit_Framework_TestCase
     public function luhnProvider()
     {
         return array(
-            array(799273987, 7992739875),
+            array(79927398, 799273982),
             array(123, 1230),
             array(456, 4564),
         );
