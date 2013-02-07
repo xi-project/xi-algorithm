@@ -1,8 +1,8 @@
 {
     "name": "xi/algorithm",
     "type": "library",
-    "description": "A Repository for algorithms",
-    "keywords": ["algorithm"],
+    "description": "General purpose algorithms",
+    "keywords": ["algorithm", "luhn"],
     "homepage": "http://github.com/xi-project/xi-algorithm",
     "license": "BSD-3-Clause",
     "authors": [
