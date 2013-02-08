@@ -18,8 +18,8 @@ class LuhnTest extends \PHPUnit_Framework_TestCase
      */
     public function generatesLuhnChecksum($number, $expected)
     {
-        $luhn = new Luhn($number);
-        $luhnedNumber = $luhn->generate();
+        $luhn = new Luhn();
+        $luhnedNumber = $luhn->generate($number);
 
         $this->assertInternalType('integer', $luhnedNumber);
         $this->assertEquals($expected, $luhnedNumber);

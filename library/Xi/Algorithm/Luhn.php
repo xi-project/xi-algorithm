@@ -5,31 +5,19 @@ namespace Xi\Algorithm;
 class Luhn
 {
     /**
-     * @var integer
-     */
-    private $number;
-
-    /**
-     * @param integer $number
-     */
-    public function __construct($number)
-    {
-        $this->number = $number;
-    }
-
-    /**
      * Returns the given number with luhn algorithm applied.
      *
      * For example 456 becomes 4564.
      *
+     * @param  integer $number
      * @return integer
      */
-    public function generate()
+    public function generate($number)
     {
         $stack = 0;
-        $number = str_split(strrev($this->number), 1);
+        $digits = str_split(strrev($number), 1);
 
-        foreach ($number as $key => $value) {
+        foreach ($digits as $key => $value) {
             if ($key % 2 === 0) {
                 $value = array_sum(str_split($value * 2, 1));
             }
@@ -43,6 +31,6 @@ class Luhn
             $stack -= 10;
         }
 
-        return (int) (implode('', array_reverse($number)) . abs($stack));
+        return (int) (implode('', array_reverse($digits)) . abs($stack));
     }
 }
