@@ -15,9 +15,9 @@ class Luhn
     public function generate($number)
     {
         $stack = 0;
-        $numbers = str_split(strrev($number), 1);
+        $digits = str_split(strrev($number), 1);
 
-        foreach ($numbers as $key => $value) {
+        foreach ($digits as $key => $value) {
             if ($key % 2 === 0) {
                 $value = array_sum(str_split($value * 2, 1));
             }
@@ -31,6 +31,6 @@ class Luhn
             $stack -= 10;
         }
 
-        return (int) (implode('', array_reverse($numbers)) . abs($stack));
+        return (int) (implode('', array_reverse($digits)) . abs($stack));
     }
 }
