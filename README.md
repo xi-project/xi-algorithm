@@ -1,13 +1,27 @@
-# Luhn
+# Xi Algorithm
+
+## Luhn
+
+Usage:
 
 ```
-$luhn = new Luhn(1234);
-$luhn->generate();
+use Xi\Algorithm\Luhn;
+
+$luhn = new Luhn();
+$luhn->generate(123); // 1230
 ```
 
-# Tests
+## Running the tests
 
-No dependencies to other libraries exist, but in order to generate an autoloader and run tests, first run
+No dependencies to other libraries exist, but in order to generate an autoloader
+first run
+
 ```
 composer.phar install --dev
+```
+
+and then run the tests with
+
+```
+phpunit -c tests
 ```
