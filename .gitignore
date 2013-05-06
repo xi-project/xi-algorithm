@@ -1,5 +1,4 @@
 composer.phar
 composer.lock
-tests/phpunit.xml
 vendor
 .idea
