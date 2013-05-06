@@ -8,15 +8,15 @@ class TopologicalSortTest extends \PHPUnit_Framework_TestCase
      */
     public function simpleCase()
     {
-        $edges = [
-            'B' => ['C', 'D'],
-            'A' => ['B'],
-            'C' => ['D'],
-        ];
+        $edges = array(
+            'B' => array('C', 'D'),
+            'A' => array('B'),
+            'C' => array('D'),
+        );
 
         for ($i = 0; $i < 100; ++$i) {
             $edges = self::shuffleGraphSpec($edges);
-            $this->assertEquals(['D', 'C', 'B', 'A'], TopologicalSort::apply($edges));
+            $this->assertEquals(array('D', 'C', 'B', 'A'), TopologicalSort::apply($edges));
         }
     }
 
@@ -35,22 +35,22 @@ class TopologicalSortTest extends \PHPUnit_Framework_TestCase
 
     public function provider()
     {
-        return [
-            [[
-                'B' => ['C', 'D'],
-                'A' => ['B'],
-                'C' => ['D'],
-            ]],
+        return array(
+            array(array(
+                'B' => array('C', 'D'),
+                'A' => array('B'),
+                'C' => array('D'),
+            )),
 
             // Wikipedia's example
-            [[
-                7 => [11, 8],
-                5 => [11],
-                3 => [8, 10],
-                11 => [2, 9, 10],
-                8 => [9]
-            ]]
-        ];
+            array(array(
+                7 => array(11, 8),
+                5 => array(11),
+                3 => array(8, 10),
+                11 => array(2, 9, 10),
+                8 => array(9)
+            ))
+        );
     }
 
     /**
@@ -59,12 +59,12 @@ class TopologicalSortTest extends \PHPUnit_Framework_TestCase
      */
     public function throwsOnCycle()
     {
-        $edges = [
-            'B' => ['C', 'D'],
-            'A' => ['B'],
-            'C' => ['D'],
-            'D' => ['A']
-        ];
+        $edges = array(
+            'B' => array('C', 'D'),
+            'A' => array('B'),
+            'C' => array('D'),
+            'D' => array('A')
+        );
 
         TopologicalSort::apply($edges);
     }
@@ -73,7 +73,7 @@ class TopologicalSortTest extends \PHPUnit_Framework_TestCase
     {
         $keys = array_keys($array);
         shuffle($keys);
-        $result = [];
+        $result = array();
         foreach ($keys as $key) {
             $result[$key] = $array[$key];
             shuffle($result[$key]);

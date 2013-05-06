@@ -28,7 +28,7 @@ class TopologicalSort
         // If we meet a node marked 2 then it's already on the list and we return.
         $unmarkedNodes = array_fill_keys($allNodes, null);
         $marks = array_fill_keys($allNodes, 0);
-        $result = [];
+        $result = array();
 
         $visit = function ($node) use ($edges, &$visit, &$marks, &$unmarkedNodes, &$result) {
             $mark = $marks[$node];
@@ -36,7 +36,7 @@ class TopologicalSort
                 $marks[$node] = 1;
                 unset($unmarkedNodes[$node]);
 
-                foreach ((isset($edges[$node]) ? $edges[$node] : []) as $next) {
+                foreach ((isset($edges[$node]) ? $edges[$node] : array()) as $next) {
                     $visit($next);
                 }
 
@@ -60,7 +60,7 @@ class TopologicalSort
 
     private static function allNodes(array $deps)
     {
-        $allNodes = [];
+        $allNodes = array();
         foreach ($deps as $node => $others) {
             if (!is_array($others)) {
                 throw new \InvalidArgumentException('Dependencies should be given as arrays, not single elements.');
