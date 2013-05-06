@@ -15,6 +15,11 @@
             "name": "Joonas Pajunen",
             "email": "joonas.pajunen@gmail.com",
             "role": "Developer"
+        },
+        {
+            "name": "Martin Pärtel",
+            "email": "martin.partel@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
