@@ -15,10 +15,18 @@
             "name": "Joonas Pajunen",
             "email": "joonas.pajunen@gmail.com",
             "role": "Developer"
+        },
+        {
+            "name": "Martin Pärtel",
+            "email": "martin.partel@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
         "psr-0": {

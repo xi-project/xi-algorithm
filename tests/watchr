@@ -1,0 +1,10 @@
+#!/usr/bin/env watchr
+def run_phpunit
+    system('echo; echo; echo; echo; cd tests/ ; ../vendor/bin/phpunit .')
+end
+
+Dir.chdir(File.dirname(File.dirname(__FILE__)))
+
+watch('.*') { run_phpunit }
+
+run_phpunit
