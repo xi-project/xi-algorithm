@@ -88,6 +88,7 @@ class LuhnTest extends \PHPUnit_Framework_TestCase
             array(799273983),
             array(1231),
             array(4565),
+            array(1),
         );
     }
 }
