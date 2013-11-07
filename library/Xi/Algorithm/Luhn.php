@@ -42,10 +42,6 @@ class Luhn
      */
     public function validate($number)
     {
-        if (strlen($number) < 2) {
-            return false;
-        }
-
         $original = substr($number, 0, strlen($number) - 1);
 
         return $this->generate($original) === $number;
