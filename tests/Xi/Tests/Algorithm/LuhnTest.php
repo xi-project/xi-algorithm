@@ -36,4 +36,58 @@ class LuhnTest extends \PHPUnit_Framework_TestCase
             array(456, 4564),
         );
     }
+
+    /**
+     * @test
+     * @dataProvider luhnValidProvider
+     *
+     * @param integer $number
+     * @param integer $expected
+     */
+    public function validatesLuhnChecksum($number)
+    {
+        $luhn = new Luhn();
+
+        $this->assertTrue($luhn->validate($number));
+    }
+
+
+    /**
+     * @return array
+     */
+    public function luhnValidProvider()
+    {
+        return array(
+            array(799273982),
+            array(1230),
+            array(4564),
+        );
+    }
+
+    /**
+     * @test
+     * @dataProvider luhnInvalidProvider
+     *
+     * @param integer $number
+     * @param integer $expected
+     */
+    public function validatesInvalidLuhnChecksum($number)
+    {
+        $luhn = new Luhn();
+
+        $this->assertFalse($luhn->validate($number));
+    }
+
+
+    /**
+     * @return array
+     */
+    public function luhnInvalidProvider()
+    {
+        return array(
+            array(799273983),
+            array(1231),
+            array(4565),
+        );
+    }
 }
