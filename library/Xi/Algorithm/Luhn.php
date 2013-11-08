@@ -33,4 +33,17 @@ class Luhn
 
         return (int) (implode('', array_reverse($digits)) . abs($stack));
     }
+
+    /**
+     * Validates the given number.
+     *
+     * @param  integer $number
+     * @return boolean
+     */
+    public function validate($number)
+    {
+        $original = substr($number, 0, strlen($number) - 1);
+
+        return $this->generate($original) === $number;
+    }
 }
